@@ -88,7 +88,7 @@ main(int argc, char * argv[])
   FixedImageType::Pointer           fixedImage = FixedImageType::New();
   MovingImageType::Pointer          movingImage = MovingImageType::New();
   TransformType::Pointer            transform = TransformType::New();
-  MetricType::Pointer               metric = MetricType::New();
+  MetricType::Pointer       metric = MetricType::New();
   OptimizerType::Pointer            optimizer = OptimizerType::New();
   RegistrationType::Pointer         registration = RegistrationType::New();
   TransformInitializerType::Pointer initializer = TransformInitializerType::New();

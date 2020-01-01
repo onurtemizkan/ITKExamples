@@ -30,7 +30,7 @@ main(int argc, char * argv[])
     return EXIT_FAILURE;
   }
 
-  const auto numberOfThreads = std::atoi(argv[1]);
+  const itk::ThreadIdType numberOfThreads{ static_cast<itk::ThreadIdType>(std::atoi(argv[1]) ) };
 
   itk::MultiThreaderBase::SetGlobalDefaultNumberOfThreads(numberOfThreads);
 
@@ -40,7 +40,7 @@ main(int argc, char * argv[])
   using FilterType = itk::MedianImageFilter<ImageType, ImageType>;
   FilterType::Pointer filter = FilterType::New();
 
-  const auto filterDefaultThreads = filter->GetMultiThreader()->GetGlobalDefaultNumberOfThreads();
+  const itk::ThreadIdType filterDefaultThreads { filter->GetMultiThreader()->GetGlobalDefaultNumberOfThreads() };
   std::cout << "Filter's default number of threads: " << filterDefaultThreads << std::endl;
 
   if (filterDefaultThreads != numberOfThreads)

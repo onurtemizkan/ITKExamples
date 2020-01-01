@@ -68,10 +68,10 @@ main(int itkNotUsed(argc), char * itkNotUsed(argv)[])
 
   using RegistrationType = itk::ImageRegistrationMethod<ImageType, ImageType>;
 
-  MetricType::Pointer       metric = MetricType::New();
-  OptimizerType::Pointer    optimizer = OptimizerType::New();
-  InterpolatorType::Pointer interpolator = InterpolatorType::New();
-  RegistrationType::Pointer registration = RegistrationType::New();
+  MetricType::Pointer metric = MetricType::New();
+  OptimizerType::Pointer      optimizer = OptimizerType::New();
+  InterpolatorType::Pointer   interpolator = InterpolatorType::New();
+  RegistrationType::Pointer   registration = RegistrationType::New();
 
 
   // The old registration framework has problems with multi-threading

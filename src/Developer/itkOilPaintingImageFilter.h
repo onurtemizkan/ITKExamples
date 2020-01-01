@@ -6,7 +6,8 @@
 
 namespace itk
 {
-/** \class OilPaintingImageFilter
+/**
+ *\class OilPaintingImageFilter
  * \brief Implements oil painting artistic image filter.
  *
  * Default number of bins is 20.

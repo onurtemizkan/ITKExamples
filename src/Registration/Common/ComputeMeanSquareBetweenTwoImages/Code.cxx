@@ -47,8 +47,8 @@ main(int argc, char * argv[])
   using InterpolatorType = itk::LinearInterpolateImageFunction<ImageType, double>;
   using TransformType = itk::TranslationTransform<double, 2>;
 
-  MetricType::Pointer    metric = MetricType::New();
-  TransformType::Pointer transform = TransformType::New();
+  MetricType::Pointer metric = MetricType::New();
+  TransformType::Pointer      transform = TransformType::New();
 
   InterpolatorType::Pointer interpolator = InterpolatorType::New();
   interpolator->SetInputImage(fixedImage);

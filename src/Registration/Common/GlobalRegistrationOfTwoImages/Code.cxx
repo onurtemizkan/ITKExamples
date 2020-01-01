@@ -64,11 +64,11 @@ main(int, char *[])
   using RegistrationType = itk::ImageRegistrationMethod<ImageType, ImageType>;
 
   // Create components
-  MetricType::Pointer       metric = MetricType::New();
-  TransformType::Pointer    transform = TransformType::New();
-  OptimizerType::Pointer    optimizer = OptimizerType::New();
-  InterpolatorType::Pointer interpolator = InterpolatorType::New();
-  RegistrationType::Pointer registration = RegistrationType::New();
+  MetricType::Pointer metric = MetricType::New();
+  TransformType::Pointer      transform = TransformType::New();
+  OptimizerType::Pointer      optimizer = OptimizerType::New();
+  InterpolatorType::Pointer   interpolator = InterpolatorType::New();
+  RegistrationType::Pointer   registration = RegistrationType::New();
 
   // Each component is now connected to the instance of the registration method.
   registration->SetMetric(metric);

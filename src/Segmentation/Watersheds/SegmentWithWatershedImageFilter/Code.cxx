@@ -74,7 +74,7 @@ main(int argc, char * argv[])
 
   using RGBFilterType = itk::ScalarToRGBColormapImageFilter<LabeledImageType, RGBImageType>;
   RGBFilterType::Pointer colormapImageFilter = RGBFilterType::New();
-  colormapImageFilter->SetColormap(itk::RGBColormapFilterEnumType::Jet);
+  colormapImageFilter->SetColormap(itk::RGBColormapFilterEnum::Jet);
   colormapImageFilter->SetInput(watershed->GetOutput());
   colormapImageFilter->Update();
 

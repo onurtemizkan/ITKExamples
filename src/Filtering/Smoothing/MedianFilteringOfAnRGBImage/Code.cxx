@@ -25,7 +25,8 @@
 
 namespace itk
 {
-/** \class myRGBPixel
+/**
+ *\class myRGBPixel
  * \brief Extends RGBPixel with operator <=
  *
  * This class overrides the <= and < operators to use Luminance as a sorting

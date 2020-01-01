@@ -30,7 +30,7 @@ main(int, char *[])
 
   using MergerType = itk::MergeLabelMapFilter<LabelMapType>;
   MergerType::Pointer merger = MergerType::New();
-  merger->SetMethod(itk::ChoiceMethod::PACK);
+  merger->SetMethod(itk::ChoiceMethodEnum::PACK);
 
   int noObjects = 4;
 

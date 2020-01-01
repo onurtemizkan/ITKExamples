@@ -135,11 +135,11 @@ main(int argc, char * argv[])
   using MetricType = itk::MutualInformationImageToImageMetric<InternalImageType, InternalImageType>;
 
 
-  TransformType::Pointer    transform = TransformType::New();
-  OptimizerType::Pointer    optimizer = OptimizerType::New();
-  InterpolatorType::Pointer interpolator = InterpolatorType::New();
-  RegistrationType::Pointer registration = RegistrationType::New();
-  MetricType::Pointer       metric = MetricType::New();
+  TransformType::Pointer      transform = TransformType::New();
+  OptimizerType::Pointer      optimizer = OptimizerType::New();
+  InterpolatorType::Pointer   interpolator = InterpolatorType::New();
+  RegistrationType::Pointer   registration = RegistrationType::New();
+  MetricType::Pointer metric = MetricType::New();
 
   registration->SetOptimizer(optimizer);
   registration->SetTransform(transform);
