@@ -62,7 +62,11 @@ main(int, char *[])
     // This crashes the program because the smart pointer created in the function goes out of scope and gets deleted
     // because it is returned as a normal pointer.
     // std::cout << pointer->GetLargestPossibleRegion() << std::endl;
-    pointer = nullptr; // Here to silence warning
+    if(pointer == nullptr)
+    {
+    // Here to silence warning
+    std::cout << "Pointer is invalid because ReturnPointer() does not return a smart pointer." << std::endl;
+    }
   }
 
   {
@@ -70,7 +74,11 @@ main(int, char *[])
     // This crashes the program because though the function returned a ::Pointer, it was not stored
     // anywhere so the reference count was not increased, so it got deleted.
     // std::cout << pointer->GetLargestPossibleRegion() << std::endl;
-    pointer = nullptr; // Here to silence warning
+    if( pointer == nullptr )
+    {
+    // Here to silence warning
+    std::cout << "Pointer is invalid because ReturnSmartPointer() is returns a temporary that is not assigned to a smart pointer." << std::endl;
+    }
   }
 
   {

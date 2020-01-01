@@ -270,7 +270,9 @@ main(int argc, char * argv[])
         return ReadScalarImage<4>(inputFileName, componentType);
       }
     }
-
+      std::cerr << "only dimensions [2,3,4] supported!" << std::endl;
+      return EXIT_FAILURE;
+    break;
     default:
       std::cerr << "not implemented yet!" << std::endl;
       return EXIT_FAILURE;

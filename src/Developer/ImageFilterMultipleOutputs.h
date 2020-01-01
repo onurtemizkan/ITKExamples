@@ -25,6 +25,17 @@ public:
   TImage *
   GetOutput2();
 
+  /**  Create the Output */
+  ProcessObject::DataObjectPointer
+  MakeOutput(ProcessObject::DataObjectPointerArraySizeType idx) override;
+
+  ProcessObject::DataObjectPointer
+  MakeOutput(const ProcessObject::DataObjectIdentifierType &) override
+  {
+  return TImage::New().GetPointer();
+  }
+
+
 protected:
   ImageFilterMultipleOutputs();
   ~ImageFilterMultipleOutputs() override = default;
@@ -33,9 +44,6 @@ protected:
   void
   GenerateData() override;
 
-  /**  Create the Output */
-  DataObject::Pointer
-  MakeOutput(unsigned int idx);
 
 private:
   ImageFilterMultipleOutputs(const Self &) = delete; // purposely not implemented
